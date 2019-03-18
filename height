@@ -1,0 +1,25 @@
+/* you only have to complete the function given below.  
+node is defined as  
+
+struct node {
+    
+    int data;
+    struct node *left;
+    struct node *right;
+  
+};
+
+*/
+int max(int p,int q)
+{
+    return p>q?p:q;
+}
+int getHeight(struct node* root) {
+    // Write your code here
+    if(root==NULL)
+        return -1;
+    else
+        return max(getHeight(root->left),getHeight(root->right))+1;
+    
+    
+}
